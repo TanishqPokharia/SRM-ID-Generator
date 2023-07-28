@@ -13,3 +13,6 @@ Download Screen:
 
 ![Screenshot 2023-07-28 223111](https://github.com/TanishqPokharia/SRM_ID_Generator/assets/114491890/4a47c095-3733-4fc4-a987-35305669b265)
 
+Sample ID Card:
+
+[Shigeo_SRM_ID.pdf](https://github.com/TanishqPokharia/SRM_ID_Generator/files/12196677/Shigeo_SRM_ID.pdf)
