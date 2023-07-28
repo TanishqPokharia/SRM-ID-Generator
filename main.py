@@ -2,7 +2,6 @@ import customtkinter as ct
 from tkinter import *
 from PIL import Image, ImageTk
 from tkinter import filedialog
-import os
 from twilio.rest import Client
 from fpdf import FPDF
 import smtplib
