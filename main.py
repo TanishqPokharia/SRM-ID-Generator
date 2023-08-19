@@ -150,9 +150,9 @@ def create_id():
 
 def send_otp():
     global contact
-    account_sid = "AC08f8d5747cfb0f4453579571f6ea2add"
-    auth_token = "41aa2cb7a14e8722e215d53418c77e00"
-    verify_sid = "VAeaa3bec02363caacc11b7866c7bc1d21"
+    account_sid = ""###################### Fill these from #######################
+    auth_token = ""#######################      your #############################
+    verify_sid = ""######################## twilio account #######################
     verified_number = contact.CTkEntry.get()
     client = Client(account_sid, auth_token)
     verification = client.verify.v2.services(verify_sid) \
