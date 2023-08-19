@@ -44,7 +44,7 @@ class dropdown():
 source=""
 def showimage():
     global source
-    fln=filedialog.askopenfilename(initialdir=r"C:\Users\tppok\OneDrive\Desktop",title='Select Image file',filetypes=(("JPG file","*.jpg"),("JPEG file","*.jpeg"),("PNGfile","*.png"),("All files","*.*")))
+    fln=filedialog.askopenfilename(initialdir=r"path",title='Select Image file',filetypes=(("JPG file","*.jpg"),("JPEG file","*.jpeg"),("PNGfile","*.png"),("All files","*.*")))
     source+=fln
     img=Image.open(fln)
     re_img=img.resize((600,600),Image.ANTIALIAS)
@@ -161,9 +161,9 @@ def send_otp():
 
 def otp_verification():
     global contact
-    account_sid = "AC08f8d5747cfb0f4453579571f6ea2add"
-    auth_token = "41aa2cb7a14e8722e215d53418c77e00"
-    verify_sid = "VAeaa3bec02363caacc11b7866c7bc1d21"
+    account_sid = ""###################### Fill these from #######################
+    auth_token = ""#######################      your #############################
+    verify_sid = ""######################## twilio account #######################
     verified_number = contact.CTkEntry.get()
     client = Client(account_sid, auth_token)
     global ask_otp
@@ -189,7 +189,7 @@ def download():
     global pdf
     global first_name
     global last_name
-    directory=filedialog.asksaveasfilename(initialdir=r"C:\Users\tppok\OneDrive\Desktop",initialfile=f"{first_name.CTkEntry.get()}_SRM_ID",title="Save ID",filetypes=[("PDF","*.pdf"),("All files","*.*")],defaultextension=".pdf")
+    directory=filedialog.asksaveasfilename(initialdir=r"path",initialfile=f"{first_name.CTkEntry.get()}_SRM_ID",title="Save ID",filetypes=[("PDF","*.pdf"),("All files","*.*")],defaultextension=".pdf")
     pdf.output(directory)
 
 
@@ -201,8 +201,8 @@ def sendmail():
     pdf.output(f_name)
     with zipfile.ZipFile('ID.zip','w',compression=zipfile.ZIP_DEFLATED) as my_zip:
         my_zip.write(f_name)
-    mail_id="tppokharia@gmail.com"
-    mail_pass="lpcbwdouvkvcobvk"
+    mail_id="" ############################### Put the sender mail id here #####################################
+    mail_pass="" ############################# Put the app specific password of your mail here##################
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
     server.login(mail_id,mail_pass)
